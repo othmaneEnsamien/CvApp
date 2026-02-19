@@ -1,0 +1,12 @@
+streamlit
+pdfplumber
+python-docx
+rapidfuzz
+requests
+plotly
+pandas
+numpy
+scikit-learn
+sentence-transformers
+matplotlib
+openpyxl
