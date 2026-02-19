@@ -713,7 +713,7 @@ def main() -> None:
             "Votre profil est actuellement en cours d'étude. Nous reviendrons vers "
             "vous dès que possible pour vous informer de la suite donnée.\n\n"
             "Cordialement,\n"
-            "L'équipe RH Cooper Pharma"
+            "L'équipe RH "
         ),
         height=160,
     )
