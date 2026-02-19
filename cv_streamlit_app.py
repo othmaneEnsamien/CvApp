@@ -417,7 +417,7 @@ def send_email(
     username = os.environ.get("SMTP_USERNAME", "")
     password = os.environ.get("SMTP_PASSWORD", "")
     from_email = os.environ.get("SMTP_FROM_EMAIL", "")
-    from_name = os.environ.get("SMTP_FROM_NAME", "Cooper Pharma RH")
+    from_name = os.environ.get("SMTP_FROM_NAME", " RH")
 
     # Adresse supplémentaire qui recevra une copie de tous les emails envoyés.
     # On peut la surcharger via la variable d'environnement EXTRA_NOTIFICATION_EMAIL,
@@ -461,7 +461,7 @@ def main() -> None:
     Application Streamlit principale.
     """
     st.set_page_config(page_title="Screening CVs candidats", layout="wide")
-    st.title("Traitement automatique des CVs – Cooper Pharma")
+    st.title("Traitement automatique des CVs ")
 
     st.write(
         "Uploadez une **description de poste** puis une liste de **CVs** "
@@ -535,7 +535,7 @@ def main() -> None:
         "Option B – Chemin d'un dossier local contenant des CVs (PDF, DOCX, TXT)",
         help=(
             "Exemple sous Windows : "
-            r"C:\Users\...\Documents\CVs_Cooper. "
+            r"C:\Users\...\Documents\CVs. "
             "Tous les fichiers PDF/DOCX/TXT de ce dossier seront analysés."
         ),
     )
@@ -682,7 +682,7 @@ def main() -> None:
         "Les variables `{{nom}}` et `{{poste}}` seront remplacées automatiquement."
     )
 
-    default_position = "Poste Cooper Pharma"
+    default_position = "Poste"
 
     subject_shortlist = st.text_input(
         "Objet email SHORTLIST",
@@ -696,7 +696,7 @@ def main() -> None:
             "Après étude de votre profil, nous souhaitons poursuivre le processus "
             "de recrutement et vous proposer un entretien.\n\n"
             "Cordialement,\n"
-            "L'équipe RH Cooper Pharma"
+            "L'équipe RH"
         ),
         height=160,
     )
@@ -726,13 +726,13 @@ def main() -> None:
         "Corps email REJET",
         value=(
             "Bonjour {{nom}},\n\n"
-            "Nous vous remercions pour l'intérêt porté à Cooper Pharma et pour votre "
+            "Nous vous remercions pour l'intérêt porté à  et pour votre "
             "candidature au poste {{poste}}.\n"
             "Après étude attentive de votre dossier, nous ne pouvons malheureusement "
             "pas donner une suite favorable à votre candidature.\n\n"
             "Nous vous souhaitons une pleine réussite dans vos recherches.\n\n"
             "Cordialement,\n"
-            "L'équipe RH Cooper Pharma"
+            "L'équipe RH "
         ),
         height=160,
     )
